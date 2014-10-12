@@ -2,6 +2,10 @@ export NODE_PATH="/usr/local/lib/node"
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 # aliases
 alias ls="ls -G"
 alias ll="ls -laG"
