@@ -1,5 +1,9 @@
-brew 'caskroom/cask/brew-cask'
 brew 'imagemagick'
+brew 'postgresql'
+brew 'node'
+brew 'phantomjs'
 
 cask 'google-chrome'
-cask 'pgadmin'
+cask 'pgadmin3'
+cask 'java'
+cask 'rubymine'
