@@ -7,15 +7,6 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias c='clear'
 
-# GIT alias
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gco='git checkout'
-alias gcob='git checkout - B'
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
 # rails aliases
 alias be="bundle exec"
 alias bi="bundle install"
