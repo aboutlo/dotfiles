@@ -42,7 +42,6 @@ echo "${state}${remote}${spacer}"
 
 # the prompt itself
 PS1='\[\e[32m\]lo\[\e[1m\]\[\e[22m\]:\[\e[1;34m\]\w\[\e[22;35m\]$(__git_ps1 " [\[\e[33m\]$(__git_status_flag)\[\e[35m\]%s]")\[\e[33m\] \$ \[\e[0m\]'
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 # cert.pem file for openssl 
 export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
