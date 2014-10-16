@@ -1,0 +1,32 @@
+# generic aliases
+alias ls="ls -G"
+alias ll="ls -laG"
+alias wget="curl -OL"
+alias be='bundle exec'
+alias mv='mv -i'
+alias rm='rm -i'
+alias c='clear'
+
+# GIT alias
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gco='git checkout'
+alias gcob='git checkout - B'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# rails aliases
+alias be="bundle exec"
+alias bi="bundle install"
+alias t="RAILS_ENV=test"
+alias d="RAILS_ENV=development"
+alias s="RAILS_ENV=staging"
+alias p="RAILS_ENV=production"
+
+# postgresql aliases
+alias pgstart="sudo sysctl -w kern.sysv.shmall=8192 && pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres -m fast stop"
+
+
+
