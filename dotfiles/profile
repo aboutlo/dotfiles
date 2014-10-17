@@ -39,8 +39,6 @@ for al in `__git_aliases`; do
 done
 
 # the prompt itself
-#PS1='\[\e[32m\]lo\[\e[1m\]\[\e[22m\]:\[\e[1;34m\]\w\[\e[22;35m\]$(__git_ps1 " [\[\e[33m\]$(__git_status_flag)\[\e[35m\]%s]")\[\e[33m\] \$ \[\e[0m\]'
-
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
     PS1='\[\033[0;32m\]lo\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(__git_ps1 "\[\033[0;95m\][%s]")\e[33m\]($(ruby_version_prompt))\[\e[33m\]\$ \[\e[0m\]'
 else
