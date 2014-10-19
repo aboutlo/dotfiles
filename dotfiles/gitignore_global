@@ -1,0 +1,86 @@
+*~
+.DS_Store
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+# Rails
+.bundle
+db/*.sqlite3
+db/*.sqlite3-journal
+bin/*
+*.log
+tmp
+tmp/**/*
+*.rdb
+
+# Documentation
+doc/api
+doc/app
+.yardoc
+.yardopts
+
+# Public Cache
+#public/javascripts/cache
+#public/stylesheets/cache
+
+# Vendor Cache
+#vendor/cache
+
+# Acts as Indexed
+index/**/*
+
+# Refinery Specific
+*.tmproj
+*.autobackupbyrefinery.*
+refinerycms-*.gem
+.autotest
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# NetBeans
+nbproject
+
+# Eclipse
+.project
+
+# Redcar
+.redcar
+
+# Rubinius
+*.rbc
+
+# Vim
+*.swp
+*.swo
+
+# RubyMine
+.idea
+*.iml
+
+# E-texteditor
+.eprj
+
+# Backup
+*~
+
+# Capybara Bug
+capybara-*html
+
+# sass
+.sass-cache
+.sass-cache/*
+
+#rvm
+.rvmrc
+.rvmrc.*
+
+#altri
+*.svn
+rspec/reports/*
+coverage/*
+#public/assets/*
