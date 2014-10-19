@@ -40,9 +40,9 @@ done
 
 # the prompt itself
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
-    PS1='\[\033[0;32m\]lo\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(__git_ps1 "\[\033[0;95m\][%s]")\e[33m\]($(ruby_version_prompt))\[\e[33m\]\$ \[\e[0m\]'
+    PS1='\[\033[0;32m\]me\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(__git_ps1 "\[\033[0;95m\][%s]")\e[33m\]($(ruby_version_prompt))\[\e[33m\]\$ \[\e[0m\]'
 else
-    PS1='\[\033[01;34m\]\w\[\033[00m\]($(ruby_version_prompt))\$ '
+    PS1='\[\033[0;32m\]me\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]($(ruby_version_prompt))\$ '
 fi
 
 # cert.pem file for openssl 
