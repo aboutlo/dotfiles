@@ -1,7 +1,7 @@
 #!/bin/sh
-# Just copy and paste the lines below (all at once, it won't work line by line!)
-# MAKE SURE YOU ARE HAPPY WITH WHAT IT DOES FIRST! THERE IS NO WARRANTY!
+brewdler uninstall
 
+# From https://gist.github.com/mxcl/1173223
 function abort {
   echo "$1"
   exit 1
