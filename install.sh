@@ -12,6 +12,9 @@ brew install rbenv-readline
 brew install ruby-build --with-libyaml --with-openssl
 rbenv install 2.1.2
 
+echo 'Installing bundler ...'
+gem install bundler # install gems from Gemfile
+
 echo 'Installing brewdler ...'
 gem install brewdler
 brewdle install # install all packages defined into Brewfile
