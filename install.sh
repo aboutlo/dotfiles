@@ -9,7 +9,6 @@ brew install rbenv
 brew install rbenv-default-gems
 brew install rbenv-gem-rehash
 brew install rbenv-readline
-brew install readline
 brew install ruby-build --with-libyaml --with-openssl
 rbenv install 2.1.2
 
