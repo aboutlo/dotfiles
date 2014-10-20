@@ -11,3 +11,7 @@ cask 'pgadmin3'# pg util
 cask 'java' # last java sdk
 cask 'rubymine' # ruby editor by JetBrain
 cask 'anvil' # micro webserver based on pow
+cask 'caffeine' # micro webserver based on pow
+cask 'focus' # No more stupid website while you are working
+cask 'virtualbox' # virtual machine hypervisor
+cask 'vagrant' # bootstrap vms and support multiple provider to priviosin it
