@@ -25,4 +25,8 @@ Take a cuppa. It will take a while...
 
 ## How to
 
-Open a new terminal and you will get you new colored `PS1` prefix
+- Open a new terminal and you will get you new colored `PS1` prefix
+- Git shortcuts are based on `g` it means git follow by the first letter of the command  `c`. it means `git commit --verbose`
+- All GIT shortcuts are listed by `gla`
+- To see all configured aliases `cat ~/.aliases`
+- Finally take a look of gitconfig and gitignore_global. Change what you need ;)
