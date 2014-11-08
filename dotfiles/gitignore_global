@@ -84,3 +84,4 @@ capybara-*html
 rspec/reports/*
 coverage/*
 #public/assets/*
+.vagrant/
