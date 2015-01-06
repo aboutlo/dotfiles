@@ -6,6 +6,7 @@ alias be='bundle exec'
 alias mv='mv -i'
 alias rm='rm -i'
 alias c='clear'
+alias gulp='node_modules/.bin/gulp'
 
 # rails aliases
 alias be="bundle exec"
