@@ -2,13 +2,13 @@ brew 'bash-completion'
 brew 'vim'
 brew 'imagemagick' # imageutil
 brew 'postgresql' # Database
-brew 'node' # Node JS engine
+brew 'nvm' # Node Version Manager
 brew 'phantomjs' # handless monitor
 
 cask 'google-chrome' # browser
 cask 'firefox' # browser
 cask 'pgadmin3'# pg util
-cask 'java' # last java sdk
+#cask 'java' # last java sdk (1.8 rubymine bug still present)
 cask 'rubymine' # ruby editor by JetBrain
 cask 'anvil' # micro webserver based on pow
 cask 'caffeine' # micro webserver based on pow
