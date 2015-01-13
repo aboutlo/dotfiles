@@ -48,15 +48,17 @@ fi
 # configure aws cli
 complete -C aws_completer aws
 
-source $(brew --prefix nvm)/nvm.sh
 
 # cert.pem file for openssl 
 export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
 export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
-# NVM & node 
+# NVM
 export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# NVM & node 
 #export NODE_PATH="/usr/local/lib/node"
 #export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 #export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
