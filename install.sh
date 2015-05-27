@@ -3,6 +3,8 @@ echo 'Installing Homebrew...'
 if ! command -v brew &>/dev/null; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+echo 'install git'
+brew install git
 
 echo 'Installing ruby via rbenv ...'
 brew install rbenv
@@ -10,14 +12,16 @@ brew install rbenv-default-gems
 brew install rbenv-gem-rehash
 brew install rbenv-readline
 brew install ruby-build --with-libyaml --with-openssl
-rbenv install 2.1.2
+rbenv install 2.2.2
+
+rbenv global 2.2.2
 
 echo 'Installing bundler ...'
 gem install bundler # install gems from Gemfile
 
 echo 'Installing brewdler ...'
-gem install brewdler
-brewdle install # install all packages defined into Brewfile
+brew tap Homebrew/brewdler
+brew bundle  # install all packages defined into Brewfile
 
 echo 'link dotfiles'
 FILES=$PWD/dotfiles/*
@@ -29,3 +33,6 @@ do
   fi
 done
 
+echo 'configure postgresql
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/
