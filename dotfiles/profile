@@ -50,8 +50,7 @@ complete -C aws_completer aws
 
 
 # cert.pem file for openssl 
-export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
-export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
+export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 # NVM
@@ -63,7 +62,15 @@ source $(brew --prefix nvm)/nvm.sh
 #export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 #export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
+# karma
+export PATH=$PATH:/usr/local/lib/node_modules/karma/bin
+
 # docker
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/lorenzo/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+export DOCKER_TLS_VERIFY=
+
+# python
+export WORKON_HOME=$HOME/.virtualenvs
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+source /usr/local/bin/virtualenvwrapper.sh
