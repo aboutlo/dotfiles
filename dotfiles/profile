@@ -54,13 +54,10 @@ export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 # NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source ~/.nvm/nvm.sh
 
-# NVM & node 
-#export NODE_PATH="/usr/local/lib/node"
-#export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
-#export PATH=/usr/local/bin:/usr/local/share/npm/bin:$PATH
+# AVN
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 # karma
 export PATH=$PATH:/usr/local/lib/node_modules/karma/bin
@@ -74,3 +71,4 @@ export DOCKER_TLS_VERIFY=
 export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
+

@@ -13,6 +13,7 @@ bin/*
 tmp
 tmp/**/*
 *.rdb
+*.pyc
 
 # Documentation
 doc/api
