@@ -60,20 +60,17 @@ source ~/.nvm/nvm.sh
 # AVN
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
-# karma
-export PATH=$PATH:/usr/local/lib/node_modules/karma/bin
-
 # docker
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/lorenzo/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=
 
 # python
-export WORKON_HOME=$HOME/.virtualenvs
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+#export PIP_VIRTUALENV_BASE=$WORKON_HOME
+#source /usr/local/bin/virtualenvwrapper.sh
 
-export LOCAL_DB_NAME=plentific
+#export LOCAL_DB_NAME=plentific
 
 # the prompt itself
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
