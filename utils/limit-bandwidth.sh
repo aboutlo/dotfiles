@@ -28,5 +28,8 @@ if [ `whoami` == "root" ]; then
     echo "Limited port $PORT to $LIMIT"
 
 else
-    echo "Failed: Run with 'sudo ./limit-bandwidth'"
+
+  echo "Failed: run with 'sudo ${0##*/} ${@}'"
+  exit 1
+
 fi
