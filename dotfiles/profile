@@ -52,6 +52,7 @@ complete -C aws_completer aws
 
 # cert.pem file for openssl 
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
+export CURL_CA_BUNDLE=~/.ssh/cacert.pem
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 # NVM
@@ -59,11 +60,6 @@ source ~/.nvm/nvm.sh
 
 # AVN
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
-# docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/lorenzo/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=
 
 # python
 #export WORKON_HOME=$HOME/.virtualenvs
@@ -79,4 +75,5 @@ else
   PS1='\[\033[1;34m\]\w\[\033[00m\]\[\033[1;32m\][$(ruby_version_prompt)]\[\033[00m\]\$\n'
 fi
 
+export PATH="$HOME/Applications/mongodb"/bin:$PATH
 
