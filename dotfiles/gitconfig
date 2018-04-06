@@ -1,14 +1,14 @@
 [user]
-  name = Lorenzo Sicilia
-  email = lorenzo.sicilia@gmail.com
+    name = Lorenzo Sicilia
+    email = lorenzo.sicilia@gmail.com
 
 [core]
-  excludesfile = /Users/lorenzo/.gitignore_global
+    excludesfile = /Users/lorenzosicilia/.gitignore_global
 
 [alias]
   # one-line log
   l = "log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-  lp = "log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --graph"
+  lp = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
   a = add
   ap = add -p
   c = commit --verbose
@@ -24,6 +24,8 @@
   s = status
   co = checkout
   cob = checkout -b
+  p = push
+  pf = push --force-with-lease
   # list branches sorted by last modified
   b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 

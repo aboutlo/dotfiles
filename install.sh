@@ -6,18 +6,11 @@ fi
 echo 'install git'
 brew install git
 
-echo 'Installing ruby via rbenv ...'
-brew install rbenv
-brew install rbenv-default-gems
-brew install rbenv-gem-rehash
-brew install rbenv-readline
-brew install ruby-build --with-libyaml --with-openssl
-rbenv install 2.2.2
+echo 'install nvm'
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
-rbenv global 2.2.2
-
-echo 'Installing bundler ...'
-gem install bundler # install gems from Gemfile
+echo 'install yarn'
+brew install yarn --without-node
 
 echo 'Installing brewdler ...'
 brew tap Homebrew/brewdler
@@ -33,6 +26,3 @@ do
   fi
 done
 
-echo 'configure postgresql
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/
