@@ -3,7 +3,7 @@
     email = lorenzo.sicilia@gmail.com
 
 [core]
-    excludesfile = /Users/lorenzosicilia/.gitignore_global
+    excludesfile = ~/.gitignore_global
 
 [alias]
   # one-line log
