@@ -58,15 +58,15 @@ else
 fi
 
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+#export PATH="$HOME/.jenv/bin:$PATH"
+#eval "$(jenv init -)"
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export PATH=$PATH:$JAVA_HOME
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+#export PATH=$PATH:$JAVA_HOME
 
-export GRAILS_HOME=/Users/lorenzosicilia/projects/grails-2.1.1
-export GRAILS_OPTS="-server -Xms256m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=1024m -Xmx4048M -Dfile.encoding=UTF-8"
-export PATH=$PATH:$GRAILS_HOME/bin
+#export GRAILS_HOME=/Users/lorenzosicilia/projects/grails-2.1.1
+#export GRAILS_OPTS="-server -Xms256m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=1024m -Xmx4048M -Dfile.encoding=UTF-8"
+#export PATH=$PATH:$GRAILS_HOME/bin
 export PATH=$PATH:$HOME/bin
 
 export CONCOURSE_EXTERNAL_URL=http://localhost:8080
