@@ -13,19 +13,6 @@ if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
   . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 fi
 
-#rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-ruby_version_prompt() {
-  if [ -f `which rbenv` ]; then
-    rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
-    echo -e $rbenv_ruby_version
-  else
-    echo -e $RUBY_VERSION
-  fi
-}
-
 node_version_prompt() {
   if [ -f `which node` ]; then
     node_version=`node --version | sed -e 's/ .*//'`
@@ -40,7 +27,7 @@ function_exists() {
     return $?
 }
 
-for al in `__git_aliases`; do
+for al in `git config -l | grep '^alias\.' | cut -d'=' -f1 | cut -d'.' -f2`; do
     alias g$al="git $al"
     complete_func=_git_$(__git_aliased_command $al)
     function_exists $complete_fnc && __git_complete g$al $complete_func
@@ -53,7 +40,7 @@ complete -C aws_completer aws
 # cert.pem file for openssl 
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 export CURL_CA_BUNDLE=~/.ssh/cacert.pem
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 
 # NVM
 source ~/.nvm/nvm.sh
@@ -61,12 +48,8 @@ source ~/.nvm/nvm.sh
 # AVN
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
-# python
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PIP_VIRTUALENV_BASE=$WORKON_HOME
-#source /usr/local/bin/virtualenvwrapper.sh
-
-#export LOCAL_DB_NAME=plentific
+# Autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # the prompt itself
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
@@ -75,5 +58,4 @@ else
   PS1='\[\033[1;34m\]\w\[\033[00m\]\[\033[1;32m\][$(ruby_version_prompt)]\[\033[00m\]\$\n'
 fi
 
-export PATH="$HOME/Applications/mongodb"/bin:$PATH
 

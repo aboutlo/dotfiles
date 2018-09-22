@@ -3,6 +3,7 @@ alias ls="ls -G"
 alias ll="ls -laG"
 alias wget="curl -OL"
 alias be='bundle exec'
+alias grep='grep -n --color'
 alias mv='mv -i'
 alias rm='rm -i'
 alias c='clear'
