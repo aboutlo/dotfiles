@@ -43,7 +43,9 @@ export CURL_CA_BUNDLE=~/.ssh/cacert.pem
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 
 # NVM
-source ~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 
 # AVN
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
