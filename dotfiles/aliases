@@ -7,6 +7,7 @@ alias grep='grep -n --color'
 alias mv='mv -i'
 alias rm='rm -i'
 alias c='clear'
+alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 alias gulp='node_modules/.bin/gulp'
 
 # rails aliases
