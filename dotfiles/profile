@@ -37,7 +37,7 @@ done
 complete -C aws_completer aws
 
 
-# cert.pem file for openssl 
+# cert.pem file for openssl
 export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
 export CURL_CA_BUNDLE=~/.ssh/cacert.pem
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
@@ -55,9 +55,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # the prompt itself
 if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
-  PS1='\[\033[1;34m\]\w\[\033[00m\]$(__git_ps1 "\[\033[0;33m\](%s)\[\033[00m\]")\[\033[1;32m\][$(node_version_prompt)]\[\033[00m\]\$\n'
+  PS1='\[\033[1;36m\]\w\[\033[00m\]$(__git_ps1 "\[\033[0;33m\](%s)\[\033[00m\]")\[\033[1;32m\][$(node_version_prompt)]\[\033[00m\]\$\n'
 else
-  PS1='\[\033[1;34m\]\w\[\033[00m\]\[\033[1;32m\][$(ruby_version_prompt)]\[\033[00m\]\$\n'
+  PS1='\[\036[1;34m\]\w\[\033[00m\]\[\033[1;32m\][$(ruby_version_prompt)]\[\033[00m\]\$\n'
 fi
 
-
+export LSCOLORS='gxBxhxDxfxhxhxhxhxcxcx'
