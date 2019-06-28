@@ -4,7 +4,7 @@ After many years with a micro .bash_profile I finally move to get something more
 This is my working progress dotfiles repo. It's still tiny but definitely better.
 
 ## Disclaimer
-I'm a `Javascript` and `Ruby on Rails` full-stack dev. I work on a OSX box.
+I'm a `Javascript` and ~Ruby on Rails~ engineer. I work on a MacOS box.
 So what you find here is a toolbox for those environments.
 
 ## Install
