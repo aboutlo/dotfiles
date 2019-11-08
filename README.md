@@ -30,3 +30,9 @@ Take a cuppa. It will take a while...
 - All GIT shortcuts are listed by `gla`
 - To see all configured aliases `cat ~/.aliases`
 - Finally take a look of gitconfig and gitignore_global. Change what you need ;)
+
+## Appify
+ 
+- `utils/appify.sh utils/xchrome.sh`
+- move `utils/xchrome.app` to `/applications`
+- Right click on the file. Click on the icon. Copy and paste an image :)
