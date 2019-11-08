@@ -36,3 +36,9 @@ Take a cuppa. It will take a while...
 - `utils/appify.sh utils/xchrome.sh`
 - move `utils/xchrome.app` to `/applications`
 - Right click on the file. Click on the icon. Copy and paste an image :)
+
+## rsync
+
+sudo rsync -ravth /from/a/path/* /to/a/path
+
+
