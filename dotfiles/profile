@@ -61,3 +61,5 @@ else
 fi
 
 export LSCOLORS='gxBxhxDxfxhxhxhxhxcxcx'
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -38,3 +38,5 @@
   added = green
   changed = red bold
   untracked = magenta bold
+[http]
+  sslVerify = true
