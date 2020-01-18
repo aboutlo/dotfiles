@@ -3,7 +3,7 @@ alias ls="ls -G"
 alias ll="ls -laG"
 alias wget="curl -OL"
 alias be='bundle exec'
-alias grep='grep -n --color'
+alias grep='grep --color'
 alias mv='mv -i'
 alias rm='rm -i'
 alias c='clear'
@@ -23,4 +23,5 @@ alias pgstart="sudo sysctl -w kern.sysv.shmall=8192 && pg_ctl -D /usr/local/var/
 alias pgstop="pg_ctl -D /usr/local/var/postgres -m fast stop"
 
 
-
+# KOMGO
+alias quorum_fix='rm -rf .db/qdata_* && rm -rf docker-compose.quorum-common.yml && kg up common'

@@ -1,5 +1,6 @@
 tap 'caskroom/cask'
 brew 'bash-completion'
+brew 'zsh-completion'
 brew 'vim'
 brew 'autojump'
 

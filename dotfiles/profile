@@ -43,9 +43,8 @@ export CURL_CA_BUNDLE=~/.ssh/cacert.pem
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # AVN
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
@@ -61,3 +60,12 @@ else
 fi
 
 export LSCOLORS='gxBxhxDxfxhxhxhxhxcxcx'
+
+# KOMGO
+export KOMGO_MEMBER_DIR=$HOME/projects/solutions/komgo-member
+export NPM_TOKEN=`grep komgo-npm-group/:_auth ~/.npmrc | awk -F'=' '{print $2}'`
+export GITLAB_TOKEN=QEs54syy7g46XDy9mRbe
+export SHELL_SESSION_HISTORY=0
+
+
+if [ -e /Users/lo/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/lo/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

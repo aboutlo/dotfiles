@@ -1,0 +1,80 @@
+autoload -U promptinit; promptinit
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+prompt pure
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+fpath+=("$HOME/.zsh/pure")
+
+if [ -f ~/.aliases ]; then
+  . ~/.aliases
+fi
+
+# Autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#   . $(brew --prefix)/etc/bash_completion
+# fi
+#
+# GIT_PS1_SHOWDIRTYSTATE=true
+# GIT_PS1_SHOWUNTRACKEDFILES=true
+#
+# if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
+#   . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+# fi
+#
+# node_version_prompt() {
+#   if [ -f `which node` ]; then
+#     node_version=`node --version | sed -e 's/ .*//'`
+#     echo -e $node_version
+#   fi
+# }
+#
+#
+#
+# function_exists() {
+#     declare -f -F $1 > /dev/null
+#     return $?
+# }
+#
+# for al in `git config -l | grep '^alias\.' | cut -d'=' -f1 | cut -d'.' -f2`; do
+#     alias g$al="git $al"
+#     complete_func=_git_$(__git_aliased_command $al)
+#     function_exists $complete_fnc && __git_complete g$al $complete_func
+# done
+#
+# # configure aws cli
+# complete -C aws_completer aws
+#
+#
+# # cert.pem file for openssl
+# export SSL_CERT_FILE=/usr/local/etc/openssl/cert.pem
+# export CURL_CA_BUNDLE=~/.ssh/cacert.pem
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
+#
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# AVN
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+
+
+# the prompt itself
+# if [ -f $(brew --prefix)/etc/bash_completion.d/git-prompt.sh ]; then
+#   PS1='\[\033[1;36m\]\w\[\033[00m\]$(__git_ps1 "\[\033[0;33m\](%s)\[\033[00m\]")\[\033[1;32m\][$(node_version_prompt)]\[\033[00m\]\$\n'
+# else
+#   PS1='\[\036[1;34m\]\w\[\033[00m\]\[\033[1;32m\][$(ruby_version_prompt)]\[\033[00m\]\$\n'
+# fi
+
+export LSCOLORS='gxBxhxDxfxhxhxhxhxcxcx'
+#
+# # KOMGO
+export KOMGO_MEMBER_DIR=$HOME/projects/solutions/komgo-member
+export NPM_TOKEN=`grep komgo-npm-group/:_auth ~/.npmrc | awk -F'=' '{print $2}'`
+export GITLAB_TOKEN=QEs54syy7g46XDy9mRbe
+#
+#
+# if [ -e /Users/lo/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/lo/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
