@@ -10,7 +10,7 @@ echo 'install nvm'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 echo 'install yarn'
-brew install yarn --without-node
+brew install yarn
 
 echo 'Installing brewdler ...'
 brew tap Homebrew/brewdler
@@ -25,4 +25,11 @@ do
     ln -s $file $(eval echo ~$USER)/.$(basename $file)
   fi
 done
+
+echo 'Installing zsh...'
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+ln -s $DOTFILES/zsh/custom/plugins/node ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/node
+
+source ~/.zshrc
 
