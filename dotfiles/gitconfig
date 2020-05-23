@@ -1,6 +1,6 @@
 [user]
-	name = Lorenzo Sicilia
-	email = lorenzo.sicilia@consensys.net
+  name = Lorenzo Sicilia
+  email = lorenzo.sicilia@gmail.com
 
 [core]
     excludesfile = ~/.gitignore_global
