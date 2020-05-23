@@ -83,6 +83,7 @@ plugins=(
 
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
+bindkey "e[3~" delete-char
 
 source $ZSH/oh-my-zsh.sh
 
